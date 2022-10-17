@@ -301,15 +301,15 @@ exports.multiply = multiply;
     "affectedFilesPendingEmit": [
       [
         "../core/anothermodule.d.ts",
-        "Full"
+        "Js | JsMap | Dts"
       ],
       [
         "../core/index.d.ts",
-        "Full"
+        "Js | JsMap | Dts"
       ],
       [
         "./index.ts",
-        "Full"
+        "Js | JsMap | Dts"
       ]
     ],
     "emitSignatures": [

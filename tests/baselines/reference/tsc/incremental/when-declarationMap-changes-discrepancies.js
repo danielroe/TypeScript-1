@@ -96,6 +96,10 @@ IncrementalBuild:
         "-3198459068-declare const x = 10;\r\n"
       ]
     ],
+    "emitSignatureDtsMapDiffers": [
+      "./a.ts",
+      "./b.ts"
+    ],
     "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
@@ -152,16 +156,18 @@ Incremental buildInfoText:: {
     ],
     "affectedFilesPendingEmit": [
       [
-        "../../lib/lib.d.ts",
-        "Full"
+        [
+          "../../lib/lib.d.ts"
+        ],
+        "Dts | DtsMap"
       ],
       [
         "./a.ts",
-        "Full"
+        "Js | Dts | DtsMap"
       ],
       [
         "./b.ts",
-        "Full"
+        "Js | Dts | DtsMap"
       ]
     ],
     "emitSignatures": [
@@ -170,10 +176,14 @@ Incremental buildInfoText:: {
         "-3198459068-declare const x = 10;\r\n"
       ]
     ],
+    "emitSignatureDtsMapDiffers": [
+      "./a.ts",
+      "./b.ts"
+    ],
     "latestChangedDtsFile": "./b.d.ts"
   },
   "version": "FakeTSVersion",
-  "size": 1251
+  "size": 1291
 }
 Clean buildInfoText:: {
   "program": {
@@ -227,11 +237,11 @@ Clean buildInfoText:: {
     "affectedFilesPendingEmit": [
       [
         "./a.ts",
-        "Full"
+        "Js | Dts | DtsMap"
       ],
       [
         "./b.ts",
-        "Full"
+        "Js | Dts | DtsMap"
       ]
     ],
     "emitSignatures": [
@@ -242,18 +252,3 @@ Clean buildInfoText:: {
   "version": "FakeTSVersion",
   "size": 1175
 }
-1:: fix error declarationMap
-*** Needs explanation
-File: /src/project/a.d.ts
-CleanBuild:
-declare const x = 10;
-//# sourceMappingURL=a.d.ts.map
-IncrementalBuild:
-declare const x = 10;
-
-File: /src/project/b.d.ts
-CleanBuild:
-declare const y = 10;
-//# sourceMappingURL=b.d.ts.map
-IncrementalBuild:
-declare const y = 10;

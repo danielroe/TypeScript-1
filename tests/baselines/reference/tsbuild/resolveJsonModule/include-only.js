@@ -180,11 +180,11 @@ exitCode:: ExitStatus.DiagnosticsPresent_OutputsSkipped
     "affectedFilesPendingEmit": [
       [
         "../src/hello.json",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../src/index.ts",
-        "Full"
+        "Js | Dts"
       ]
     ],
     "emitSignatures": [

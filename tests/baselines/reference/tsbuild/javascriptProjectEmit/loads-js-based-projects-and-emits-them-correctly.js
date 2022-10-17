@@ -248,11 +248,11 @@ module.exports = {};
     "affectedFilesPendingEmit": [
       [
         "../common/nominal.d.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../src/sub-project/index.js",
-        "Full"
+        "Js | Dts"
       ]
     ],
     "emitSignatures": [

@@ -110,11 +110,11 @@ exitCode:: ExitStatus.undefined
     "affectedFilesPendingEmit": [
       [
         "./a.js",
-        "Full"
+        "Js"
       ],
       [
         "./b.ts",
-        "Full"
+        "Js"
       ]
     ]
   },
@@ -258,11 +258,11 @@ exitCode:: ExitStatus.undefined
     "affectedFilesPendingEmit": [
       [
         "./a.js",
-        "Full"
+        "Js"
       ],
       [
         "./b.ts",
-        "Full"
+        "Js"
       ]
     ]
   },

@@ -462,23 +462,23 @@ exitCode:: ExitStatus.DiagnosticsPresent_OutputsGenerated
     "affectedFilesPendingEmit": [
       [
         "./src/class.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         [
           "./src/directuse.ts"
         ],
-        "DtsOnly"
+        "Dts"
       ],
       [
         "./src/indirectclass.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         [
           "./src/indirectuse.ts"
         ],
-        "DtsOnly"
+        "Dts"
       ]
     ],
     "emitSignatures": [
@@ -1184,23 +1184,23 @@ exitCode:: ExitStatus.Success
     "affectedFilesPendingEmit": [
       [
         "./src/class.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         [
           "./src/directuse.ts"
         ],
-        "DtsOnly"
+        "Dts"
       ],
       [
         "./src/indirectclass.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         [
           "./src/indirectuse.ts"
         ],
-        "DtsOnly"
+        "Dts"
       ]
     ],
     "emitSignatures": [

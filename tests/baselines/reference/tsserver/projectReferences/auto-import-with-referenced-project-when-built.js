@@ -165,15 +165,15 @@ export declare function foo(): void;
     "affectedFilesPendingEmit": [
       [
         "../../src/program/bar.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../src/program/index.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../../shared/bld/library/index.d.ts",
-        "Full"
+        "Js | Dts"
       ]
     ],
     "emitSignatures": [

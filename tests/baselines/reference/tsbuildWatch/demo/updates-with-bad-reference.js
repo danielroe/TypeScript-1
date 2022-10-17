@@ -392,19 +392,19 @@ exitCode:: ExitStatus.undefined
     "affectedFilesPendingEmit": [
       [
         "../../animals/animal.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../animals/dog.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../animals/index.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../core/utilities.ts",
-        "Full"
+        "Js | Dts"
       ]
     ],
     "emitSignatures": [
@@ -664,19 +664,19 @@ exitCode:: ExitStatus.undefined
     "affectedFilesPendingEmit": [
       [
         "../../animals/animal.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../animals/dog.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../animals/index.ts",
-        "Full"
+        "Js | Dts"
       ],
       [
         "../../core/utilities.ts",
-        "Full"
+        "Js | Dts"
       ]
     ],
     "emitSignatures": [

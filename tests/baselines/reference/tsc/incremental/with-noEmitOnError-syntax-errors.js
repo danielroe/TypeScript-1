@@ -132,15 +132,15 @@ Shape signatures in builder refreshed for::
     "affectedFilesPendingEmit": [
       [
         "../shared/types/db.ts",
-        "Full"
+        "Js"
       ],
       [
         "../src/main.ts",
-        "Full"
+        "Js"
       ],
       [
         "../src/other.ts",
-        "Full"
+        "Js"
       ]
     ]
   },

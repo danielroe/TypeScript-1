@@ -170,7 +170,7 @@ exports.A = A;
     "affectedFilesPendingEmit": [
       [
         "./b.ts",
-        "Full"
+        "Js | Dts"
       ]
     ],
     "emitSignatures": [

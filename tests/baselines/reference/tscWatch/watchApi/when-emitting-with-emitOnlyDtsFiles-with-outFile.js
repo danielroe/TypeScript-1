@@ -227,6 +227,105 @@ exitCode:: ExitStatus.undefined
 Change:: Emit all files
 
 Input::
+//// [/user/username/projects/myproject/outFile.tsbuildinfo]
+{"bundle":{"commonSourceDirectory":"./","sourceFiles":["./a.ts","./b.ts"],"js":{"sections":[{"pos":0,"end":326,"kind":"text"}],"hash":"13183887368-define(\"a\", [\"require\", \"exports\"], function (require, exports) {\n    \"use strict\";\n    exports.__esModule = true;\n    exports.x = void 0;\n    exports.x = 10;\n});\ndefine(\"b\", [\"require\", \"exports\"], function (require, exports) {\n    \"use strict\";\n    exports.__esModule = true;\n    exports.y = void 0;\n    exports.y = 10;\n});\n"},"dts":{"sections":[{"pos":0,"end":96,"kind":"text"}],"hash":"-4206946595-declare module \"a\" {\n    export const x = 10;\n}\ndeclare module \"b\" {\n    export const y = 10;\n}\n"}},"program":{"fileNames":["./a.ts","./b.ts"],"fileInfos":["-10726455937-export const x = 10;","-13729955264-export const y = 10;"],"options":{"composite":true,"outFile":"./outFile.js"},"outSignature":"-4206946595-declare module \"a\" {\n    export const x = 10;\n}\ndeclare module \"b\" {\n    export const y = 10;\n}\n","latestChangedDtsFile":"./outFile.d.ts"},"version":"FakeTSVersion"}
+
+//// [/user/username/projects/myproject/outFile.tsbuildinfo.readable.baseline.txt]
+{
+  "bundle": {
+    "commonSourceDirectory": "./",
+    "sourceFiles": [
+      "./a.ts",
+      "./b.ts"
+    ],
+    "js": {
+      "sections": [
+        {
+          "pos": 0,
+          "end": 326,
+          "kind": "text"
+        }
+      ],
+      "hash": "13183887368-define(\"a\", [\"require\", \"exports\"], function (require, exports) {\n    \"use strict\";\n    exports.__esModule = true;\n    exports.x = void 0;\n    exports.x = 10;\n});\ndefine(\"b\", [\"require\", \"exports\"], function (require, exports) {\n    \"use strict\";\n    exports.__esModule = true;\n    exports.y = void 0;\n    exports.y = 10;\n});\n"
+    },
+    "dts": {
+      "sections": [
+        {
+          "pos": 0,
+          "end": 96,
+          "kind": "text"
+        }
+      ],
+      "hash": "-4206946595-declare module \"a\" {\n    export const x = 10;\n}\ndeclare module \"b\" {\n    export const y = 10;\n}\n"
+    }
+  },
+  "program": {
+    "fileNames": [
+      "./a.ts",
+      "./b.ts"
+    ],
+    "fileInfos": {
+      "./a.ts": "-10726455937-export const x = 10;",
+      "./b.ts": "-13729955264-export const y = 10;"
+    },
+    "options": {
+      "composite": true,
+      "outFile": "./outFile.js"
+    },
+    "outSignature": "-4206946595-declare module \"a\" {\n    export const x = 10;\n}\ndeclare module \"b\" {\n    export const y = 10;\n}\n",
+    "latestChangedDtsFile": "./outFile.d.ts"
+  },
+  "version": "FakeTSVersion",
+  "size": 1073
+}
+
+//// [/user/username/projects/myproject/outFile.tsbuildinfo.baseline.txt]
+======================================================================
+File:: /user/username/projects/myproject/outFile.js
+----------------------------------------------------------------------
+text: (0-326)
+define("a", ["require", "exports"], function (require, exports) {
+    "use strict";
+    exports.__esModule = true;
+    exports.x = void 0;
+    exports.x = 10;
+});
+define("b", ["require", "exports"], function (require, exports) {
+    "use strict";
+    exports.__esModule = true;
+    exports.y = void 0;
+    exports.y = 10;
+});
+
+======================================================================
+======================================================================
+File:: /user/username/projects/myproject/outFile.d.ts
+----------------------------------------------------------------------
+text: (0-96)
+declare module "a" {
+    export const x = 10;
+}
+declare module "b" {
+    export const y = 10;
+}
+
+======================================================================
+
+//// [/user/username/projects/myproject/outFile.js]
+define("a", ["require", "exports"], function (require, exports) {
+    "use strict";
+    exports.__esModule = true;
+    exports.x = void 0;
+    exports.x = 10;
+});
+define("b", ["require", "exports"], function (require, exports) {
+    "use strict";
+    exports.__esModule = true;
+    exports.y = void 0;
+    exports.y = 10;
+});
+
+
 
 Output::
 

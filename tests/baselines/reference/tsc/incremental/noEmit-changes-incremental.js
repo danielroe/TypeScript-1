@@ -426,19 +426,19 @@ exitCode:: ExitStatus.DiagnosticsPresent_OutputsGenerated
     "affectedFilesPendingEmit": [
       [
         "./src/class.ts",
-        "Full"
+        "Js"
       ],
       [
         "./src/directuse.ts",
-        "Full"
+        "Js"
       ],
       [
         "./src/indirectclass.ts",
-        "Full"
+        "Js"
       ],
       [
         "./src/indirectuse.ts",
-        "Full"
+        "Js"
       ]
     ]
   },
@@ -1126,11 +1126,11 @@ exitCode:: ExitStatus.Success
     "affectedFilesPendingEmit": [
       [
         "./src/class.ts",
-        "Full"
+        "Js"
       ],
       [
         "./src/indirectclass.ts",
-        "Full"
+        "Js"
       ]
     ]
   },

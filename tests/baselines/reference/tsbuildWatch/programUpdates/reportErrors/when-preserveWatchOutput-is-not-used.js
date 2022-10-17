@@ -616,7 +616,7 @@ exitCode:: ExitStatus.undefined
     "affectedFilesPendingEmit": [
       [
         "./index.ts",
-        "Full"
+        "Js | JsMap | Dts"
       ]
     ],
     "latestChangedDtsFile": "./index.d.ts"
@@ -749,7 +749,7 @@ exitCode:: ExitStatus.undefined
     "affectedFilesPendingEmit": [
       [
         "./index.ts",
-        "Full"
+        "Js | Dts | DtsMap"
       ]
     ],
     "latestChangedDtsFile": "./index.d.ts"
