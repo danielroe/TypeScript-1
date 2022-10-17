@@ -103,6 +103,7 @@ CleanBuild:
       }
     },
     "options": {
+      "composite": true,
       "sourceMap": true
     },
     "referencedMap": {
@@ -119,7 +120,8 @@ CleanBuild:
       "./b.ts",
       "./c.ts",
       "./d.ts"
-    ]
+    ],
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
@@ -144,6 +146,9 @@ IncrementalBuild:
         "version": "-19615769517-import { b } from \"./b\";export const d = b;"
       }
     },
+    "options": {
+      "composite": true
+    },
     "referencedMap": {
       "./c.ts": [
         "./a.ts"
@@ -159,58 +164,12 @@ IncrementalBuild:
       "./c.ts",
       "./d.ts"
     ],
-    "options": {}
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./c.ts": [
-    "./a.ts"
-  ],
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-1:: should re-emit only js so they dont contain sourcemap
+2:: with declaration should not emit anything
 *** Needs explanation
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./c.ts": [
-    "./a.ts"
-  ],
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-2:: with declaration, emit Dts and should not emit js
-*** Needs explanation
-File: /src/project/a.d.ts
-CleanBuild:
-export declare const a = 10;
-
-IncrementalBuild:
-
-File: /src/project/b.d.ts
-CleanBuild:
-export declare const b = 10;
-
-IncrementalBuild:
-
-File: /src/project/c.d.ts
-CleanBuild:
-export declare const c = 10;
-
-IncrementalBuild:
-
-File: /src/project/d.d.ts
-CleanBuild:
-export declare const d = 10;
-
-IncrementalBuild:
-
 TsBuild info text without affectedFilesPendingEmit:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt::
 CleanBuild:
 {
@@ -234,6 +193,7 @@ CleanBuild:
       }
     },
     "options": {
+      "composite": true,
       "declaration": true
     },
     "referencedMap": {
@@ -250,7 +210,8 @@ CleanBuild:
       "./b.ts",
       "./c.ts",
       "./d.ts"
-    ]
+    ],
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
@@ -275,6 +236,9 @@ IncrementalBuild:
         "version": "-19615769517-import { b } from \"./b\";export const d = b;"
       }
     },
+    "options": {
+      "composite": true
+    },
     "referencedMap": {
       "./c.ts": [
         "./a.ts"
@@ -290,21 +254,11 @@ IncrementalBuild:
       "./c.ts",
       "./d.ts"
     ],
-    "options": {}
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./c.ts": [
-    "./a.ts"
-  ],
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-3:: with declaration and declarationMap
+4:: with declaration and declarationMap
 *** Needs explanation
 File: /src/project/a.d.ts.map
 CleanBuild:
@@ -316,6 +270,7 @@ CleanBuild:
 export declare const a = 10;
 //# sourceMappingURL=a.d.ts.map
 IncrementalBuild:
+export declare const a = 10;
 
 File: /src/project/b.d.ts.map
 CleanBuild:
@@ -327,6 +282,7 @@ CleanBuild:
 export declare const b = 10;
 //# sourceMappingURL=b.d.ts.map
 IncrementalBuild:
+export declare const b = 10;
 
 File: /src/project/c.d.ts.map
 CleanBuild:
@@ -338,6 +294,7 @@ CleanBuild:
 export declare const c = 10;
 //# sourceMappingURL=c.d.ts.map
 IncrementalBuild:
+export declare const c = 10;
 
 File: /src/project/d.d.ts.map
 CleanBuild:
@@ -349,6 +306,7 @@ CleanBuild:
 export declare const d = 10;
 //# sourceMappingURL=d.d.ts.map
 IncrementalBuild:
+export declare const d = 10;
 
 TsBuild info text without affectedFilesPendingEmit:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt::
 CleanBuild:
@@ -373,6 +331,7 @@ CleanBuild:
       }
     },
     "options": {
+      "composite": true,
       "declaration": true,
       "declarationMap": true
     },
@@ -390,7 +349,8 @@ CleanBuild:
       "./b.ts",
       "./c.ts",
       "./d.ts"
-    ]
+    ],
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
@@ -415,6 +375,9 @@ IncrementalBuild:
         "version": "-19615769517-import { b } from \"./b\";export const d = b;"
       }
     },
+    "options": {
+      "composite": true
+    },
     "referencedMap": {
       "./c.ts": [
         "./a.ts"
@@ -430,87 +393,102 @@ IncrementalBuild:
       "./c.ts",
       "./d.ts"
     ],
-    "options": {}
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./c.ts": [
-    "./a.ts"
-  ],
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-4:: no-change-run
+6:: with emitDeclarationOnly should not emit anything
 *** Needs explanation
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./c.ts": [
-    "./a.ts"
-  ],
-  "./d.ts": [
-    "./b.ts"
-  ]
+TsBuild info text without affectedFilesPendingEmit:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt::
+CleanBuild:
+{
+  "program": {
+    "fileInfos": {
+      "../../lib/lib.d.ts": {
+        "version": "3858781397-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ndeclare const console: { log(msg: any): void; };",
+        "affectsGlobalScope": true
+      },
+      "./a.ts": {
+        "version": "-18487752940-export const a = 10;const aLocal = 10;"
+      },
+      "./b.ts": {
+        "version": "-6189287562-export const b = 10;const bLocal = 10;"
+      },
+      "./c.ts": {
+        "version": "3248317647-import { a } from \"./a\";export const c = a;"
+      },
+      "./d.ts": {
+        "version": "-19615769517-import { b } from \"./b\";export const d = b;"
+      }
+    },
+    "options": {
+      "composite": true,
+      "emitDeclarationOnly": true
+    },
+    "referencedMap": {
+      "./c.ts": [
+        "./a.ts"
+      ],
+      "./d.ts": [
+        "./b.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "../../lib/lib.d.ts",
+      "./a.ts",
+      "./b.ts",
+      "./c.ts",
+      "./d.ts"
+    ],
+    "latestChangedDtsFile": "FakeFileName"
+  },
+  "version": "FakeTSVersion"
 }
-Clean: {}
-5:: local change
-*** Needs explanation
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
+IncrementalBuild:
+{
+  "program": {
+    "fileInfos": {
+      "../../lib/lib.d.ts": {
+        "version": "3858781397-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ndeclare const console: { log(msg: any): void; };",
+        "affectsGlobalScope": true
+      },
+      "./a.ts": {
+        "version": "-18487752940-export const a = 10;const aLocal = 10;"
+      },
+      "./b.ts": {
+        "version": "-6189287562-export const b = 10;const bLocal = 10;"
+      },
+      "./c.ts": {
+        "version": "3248317647-import { a } from \"./a\";export const c = a;"
+      },
+      "./d.ts": {
+        "version": "-19615769517-import { b } from \"./b\";export const d = b;"
+      }
+    },
+    "options": {
+      "composite": true
+    },
+    "referencedMap": {
+      "./c.ts": [
+        "./a.ts"
+      ],
+      "./d.ts": [
+        "./b.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "../../lib/lib.d.ts",
+      "./a.ts",
+      "./b.ts",
+      "./c.ts",
+      "./d.ts"
+    ],
+    "latestChangedDtsFile": "FakeFileName"
+  },
+  "version": "FakeTSVersion"
 }
-Clean: {}
-6:: with declaration and declarationMap
+9:: with declaration should not emit anything
 *** Needs explanation
-File: /src/project/a.d.ts.map
-CleanBuild:
-{"version":3,"file":"a.d.ts","sourceRoot":"","sources":["a.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,CAAC,KAAK,CAAC"}
-IncrementalBuild:
-
-File: /src/project/a.d.ts
-CleanBuild:
-export declare const a = 10;
-//# sourceMappingURL=a.d.ts.map
-IncrementalBuild:
-
-File: /src/project/b.d.ts.map
-CleanBuild:
-{"version":3,"file":"b.d.ts","sourceRoot":"","sources":["b.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,CAAC,KAAK,CAAC"}
-IncrementalBuild:
-
-File: /src/project/b.d.ts
-CleanBuild:
-export declare const b = 10;
-//# sourceMappingURL=b.d.ts.map
-IncrementalBuild:
-
-File: /src/project/c.d.ts.map
-CleanBuild:
-{"version":3,"file":"c.d.ts","sourceRoot":"","sources":["c.ts"],"names":[],"mappings":"AAAwB,eAAO,MAAM,CAAC,KAAI,CAAC"}
-IncrementalBuild:
-
-File: /src/project/c.d.ts
-CleanBuild:
-export declare const c = 10;
-//# sourceMappingURL=c.d.ts.map
-IncrementalBuild:
-
-File: /src/project/d.d.ts.map
-CleanBuild:
-{"version":3,"file":"d.d.ts","sourceRoot":"","sources":["d.ts"],"names":[],"mappings":"AAAwB,eAAO,MAAM,CAAC,KAAI,CAAC"}
-IncrementalBuild:
-
-File: /src/project/d.d.ts
-CleanBuild:
-export declare const d = 10;
-//# sourceMappingURL=d.d.ts.map
-IncrementalBuild:
-
 TsBuild info text without affectedFilesPendingEmit:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt::
 CleanBuild:
 {
@@ -534,8 +512,8 @@ CleanBuild:
       }
     },
     "options": {
-      "declaration": true,
-      "declarationMap": true
+      "composite": true,
+      "declaration": true
     },
     "referencedMap": {
       "./c.ts": [
@@ -551,7 +529,8 @@ CleanBuild:
       "./b.ts",
       "./c.ts",
       "./d.ts"
-    ]
+    ],
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
@@ -576,6 +555,9 @@ IncrementalBuild:
         "version": "-19615769517-import { b } from \"./b\";export const d = b;"
       }
     },
+    "options": {
+      "composite": true
+    },
     "referencedMap": {
       "./c.ts": [
         "./a.ts"
@@ -591,27 +573,11 @@ IncrementalBuild:
       "./c.ts",
       "./d.ts"
     ],
-    "options": {}
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-7:: no-change-run
-*** Needs explanation
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-8:: with inlineSourceMap
+10:: with inlineSourceMap
 *** Needs explanation
 File: /src/project/a.js
 CleanBuild:
@@ -696,6 +662,7 @@ CleanBuild:
       }
     },
     "options": {
+      "composite": true,
       "inlineSourceMap": true
     },
     "referencedMap": {
@@ -712,7 +679,8 @@ CleanBuild:
       "./b.ts",
       "./c.ts",
       "./d.ts"
-    ]
+    ],
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
@@ -737,6 +705,9 @@ IncrementalBuild:
         "version": "-19615769517-import { b } from \"./b\";export const d = b;"
       }
     },
+    "options": {
+      "composite": true
+    },
     "referencedMap": {
       "./c.ts": [
         "./a.ts"
@@ -752,18 +723,11 @@ IncrementalBuild:
       "./c.ts",
       "./d.ts"
     ],
-    "options": {}
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-9:: with sourceMap
+11:: with sourceMap
 *** Needs explanation
 File: /src/project/a.js.map
 CleanBuild:
@@ -868,6 +832,7 @@ CleanBuild:
       }
     },
     "options": {
+      "composite": true,
       "sourceMap": true
     },
     "referencedMap": {
@@ -884,114 +849,12 @@ CleanBuild:
       "./b.ts",
       "./c.ts",
       "./d.ts"
-    ]
-  },
-  "version": "FakeTSVersion"
-}
-IncrementalBuild:
-{
-  "program": {
-    "fileInfos": {
-      "../../lib/lib.d.ts": {
-        "version": "3858781397-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ndeclare const console: { log(msg: any): void; };",
-        "affectsGlobalScope": true
-      },
-      "./a.ts": {
-        "version": "-17390360476-export const a = 10;const aLocal = 100;"
-      },
-      "./b.ts": {
-        "version": "-6189287562-export const b = 10;const bLocal = 10;"
-      },
-      "./c.ts": {
-        "version": "3248317647-import { a } from \"./a\";export const c = a;"
-      },
-      "./d.ts": {
-        "version": "-19615769517-import { b } from \"./b\";export const d = b;"
-      }
-    },
-    "referencedMap": {
-      "./c.ts": [
-        "./a.ts"
-      ],
-      "./d.ts": [
-        "./b.ts"
-      ]
-    },
-    "semanticDiagnosticsPerFile": [
-      "../../lib/lib.d.ts",
-      "./a.ts",
-      "./b.ts",
-      "./c.ts",
-      "./d.ts"
     ],
-    "options": {}
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-10:: emit js files
-*** Needs explanation
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-11:: with declaration and declarationMap (should this reemit or not?)
-*** Needs explanation
-File: /src/project/a.d.ts.map
-CleanBuild:
-{"version":3,"file":"a.d.ts","sourceRoot":"","sources":["a.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,CAAC,KAAK,CAAC"}
 IncrementalBuild:
-
-File: /src/project/a.d.ts
-CleanBuild:
-export declare const a = 10;
-//# sourceMappingURL=a.d.ts.map
-IncrementalBuild:
-
-File: /src/project/b.d.ts.map
-CleanBuild:
-{"version":3,"file":"b.d.ts","sourceRoot":"","sources":["b.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,CAAC,KAAK,CAAC"}
-IncrementalBuild:
-
-File: /src/project/b.d.ts
-CleanBuild:
-export declare const b = 10;
-//# sourceMappingURL=b.d.ts.map
-IncrementalBuild:
-
-File: /src/project/c.d.ts.map
-CleanBuild:
-{"version":3,"file":"c.d.ts","sourceRoot":"","sources":["c.ts"],"names":[],"mappings":"AAAwB,eAAO,MAAM,CAAC,KAAI,CAAC"}
-IncrementalBuild:
-
-File: /src/project/c.d.ts
-CleanBuild:
-export declare const c = 10;
-//# sourceMappingURL=c.d.ts.map
-IncrementalBuild:
-
-File: /src/project/d.d.ts.map
-CleanBuild:
-{"version":3,"file":"d.d.ts","sourceRoot":"","sources":["d.ts"],"names":[],"mappings":"AAAwB,eAAO,MAAM,CAAC,KAAI,CAAC"}
-IncrementalBuild:
-
-File: /src/project/d.d.ts
-CleanBuild:
-export declare const d = 10;
-//# sourceMappingURL=d.d.ts.map
-IncrementalBuild:
-
-TsBuild info text without affectedFilesPendingEmit:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt::
-CleanBuild:
 {
   "program": {
     "fileInfos": {
@@ -1013,47 +876,7 @@ CleanBuild:
       }
     },
     "options": {
-      "declaration": true,
-      "declarationMap": true
-    },
-    "referencedMap": {
-      "./c.ts": [
-        "./a.ts"
-      ],
-      "./d.ts": [
-        "./b.ts"
-      ]
-    },
-    "semanticDiagnosticsPerFile": [
-      "../../lib/lib.d.ts",
-      "./a.ts",
-      "./b.ts",
-      "./c.ts",
-      "./d.ts"
-    ]
-  },
-  "version": "FakeTSVersion"
-}
-IncrementalBuild:
-{
-  "program": {
-    "fileInfos": {
-      "../../lib/lib.d.ts": {
-        "version": "3858781397-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ndeclare const console: { log(msg: any): void; };",
-        "affectsGlobalScope": true
-      },
-      "./a.ts": {
-        "version": "-17390360476-export const a = 10;const aLocal = 100;"
-      },
-      "./b.ts": {
-        "version": "-6189287562-export const b = 10;const bLocal = 10;"
-      },
-      "./c.ts": {
-        "version": "3248317647-import { a } from \"./a\";export const c = a;"
-      },
-      "./d.ts": {
-        "version": "-19615769517-import { b } from \"./b\";export const d = b;"
-      }
+      "composite": true
     },
     "referencedMap": {
       "./c.ts": [
@@ -1070,151 +893,7 @@ IncrementalBuild:
       "./c.ts",
       "./d.ts"
     ],
-    "options": {}
+    "latestChangedDtsFile": "FakeFileName"
   },
   "version": "FakeTSVersion"
 }
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
-12:: with declaration and declarationMap, should not re-emit
-*** Needs explanation
-File: /src/project/a.d.ts.map
-CleanBuild:
-{"version":3,"file":"a.d.ts","sourceRoot":"","sources":["a.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,CAAC,KAAK,CAAC"}
-IncrementalBuild:
-
-File: /src/project/a.d.ts
-CleanBuild:
-export declare const a = 10;
-//# sourceMappingURL=a.d.ts.map
-IncrementalBuild:
-
-File: /src/project/b.d.ts.map
-CleanBuild:
-{"version":3,"file":"b.d.ts","sourceRoot":"","sources":["b.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,CAAC,KAAK,CAAC"}
-IncrementalBuild:
-
-File: /src/project/b.d.ts
-CleanBuild:
-export declare const b = 10;
-//# sourceMappingURL=b.d.ts.map
-IncrementalBuild:
-
-File: /src/project/c.d.ts.map
-CleanBuild:
-{"version":3,"file":"c.d.ts","sourceRoot":"","sources":["c.ts"],"names":[],"mappings":"AAAwB,eAAO,MAAM,CAAC,KAAI,CAAC"}
-IncrementalBuild:
-
-File: /src/project/c.d.ts
-CleanBuild:
-export declare const c = 10;
-//# sourceMappingURL=c.d.ts.map
-IncrementalBuild:
-
-File: /src/project/d.d.ts.map
-CleanBuild:
-{"version":3,"file":"d.d.ts","sourceRoot":"","sources":["d.ts"],"names":[],"mappings":"AAAwB,eAAO,MAAM,CAAC,KAAI,CAAC"}
-IncrementalBuild:
-
-File: /src/project/d.d.ts
-CleanBuild:
-export declare const d = 10;
-//# sourceMappingURL=d.d.ts.map
-IncrementalBuild:
-
-TsBuild info text without affectedFilesPendingEmit:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt::
-CleanBuild:
-{
-  "program": {
-    "fileInfos": {
-      "../../lib/lib.d.ts": {
-        "version": "3858781397-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ndeclare const console: { log(msg: any): void; };",
-        "affectsGlobalScope": true
-      },
-      "./a.ts": {
-        "version": "-17390360476-export const a = 10;const aLocal = 100;"
-      },
-      "./b.ts": {
-        "version": "-6189287562-export const b = 10;const bLocal = 10;"
-      },
-      "./c.ts": {
-        "version": "3248317647-import { a } from \"./a\";export const c = a;"
-      },
-      "./d.ts": {
-        "version": "-19615769517-import { b } from \"./b\";export const d = b;"
-      }
-    },
-    "options": {
-      "declaration": true,
-      "declarationMap": true
-    },
-    "referencedMap": {
-      "./c.ts": [
-        "./a.ts"
-      ],
-      "./d.ts": [
-        "./b.ts"
-      ]
-    },
-    "semanticDiagnosticsPerFile": [
-      "../../lib/lib.d.ts",
-      "./a.ts",
-      "./b.ts",
-      "./c.ts",
-      "./d.ts"
-    ]
-  },
-  "version": "FakeTSVersion"
-}
-IncrementalBuild:
-{
-  "program": {
-    "fileInfos": {
-      "../../lib/lib.d.ts": {
-        "version": "3858781397-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ndeclare const console: { log(msg: any): void; };",
-        "affectsGlobalScope": true
-      },
-      "./a.ts": {
-        "version": "-17390360476-export const a = 10;const aLocal = 100;"
-      },
-      "./b.ts": {
-        "version": "-6189287562-export const b = 10;const bLocal = 10;"
-      },
-      "./c.ts": {
-        "version": "3248317647-import { a } from \"./a\";export const c = a;"
-      },
-      "./d.ts": {
-        "version": "-19615769517-import { b } from \"./b\";export const d = b;"
-      }
-    },
-    "referencedMap": {
-      "./c.ts": [
-        "./a.ts"
-      ],
-      "./d.ts": [
-        "./b.ts"
-      ]
-    },
-    "semanticDiagnosticsPerFile": [
-      "../../lib/lib.d.ts",
-      "./a.ts",
-      "./b.ts",
-      "./c.ts",
-      "./d.ts"
-    ],
-    "options": {}
-  },
-  "version": "FakeTSVersion"
-}
-Incremental and clean size of maps do not match:: exportedModulesMap:: File:: /src/project/tsconfig.tsbuildinfo.readable.baseline.txt
-Incremental: {
-  "./d.ts": [
-    "./b.ts"
-  ]
-}
-Clean: {}
